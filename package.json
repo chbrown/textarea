@@ -1,0 +1,17 @@
+{
+  "name": "textarea",
+  "description": "DOM enhancements for the textarea element, including tabs and auto-expansion",
+  "keywords": [
+    "browser",
+    "dom",
+    "textarea",
+    "autofit",
+    "angular"
+  ],
+  "version": "0.0.0",
+  "homepage": "https://github.com/chbrown/textarea",
+  "repository": "git://github.com/chbrown/textarea.git",
+  "bugs": "https://github.com/chbrown/textarea/issues",
+  "author": "Christopher Brown <io@henrian.com> (http://henrian.com)",
+  "license": "MIT"
+}
