@@ -18,6 +18,6 @@
     "webpack": "^1.12.12"
   },
   "scripts": {
-    "dist": "webpack index.js --output-library TextArea --outfile dist/textarea.min.js -p"
+    "dist": "webpack --output-library TextArea -p"
   }
 }
