@@ -13,5 +13,11 @@
   "repository": "git://github.com/chbrown/textarea.git",
   "bugs": "https://github.com/chbrown/textarea/issues",
   "author": "Christopher Brown <io@henrian.com> (http://henrian.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.12.12"
+  },
+  "scripts": {
+    "dist": "webpack index.js --output-library TextArea --outfile dist/textarea.min.js -p"
+  }
 }
