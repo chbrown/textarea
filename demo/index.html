@@ -3,8 +3,6 @@
   <meta charset="utf-8">
   <link href="data:image/png;base64," type="image/x-icon" rel="icon">
   <title>textarea</title>
-  <script>window.exports = window;</script>
-  <script src="../index.js"></script>
   <style>
   textarea {
     min-width: 800px;
@@ -62,11 +60,12 @@ parts.forEach(function(part) {
     </label>
   </form>
 
+  <script src="../dist/textarea.js"></script>
   <script>
   /*jslint browser: true */ /* globals Textarea */
   var textarea = document.querySelector('textarea');
   // var textarea_enhanced = Textarea.enhance(textarea);
-  Textarea.enhance(textarea);
+  TextArea.enhance(textarea);
 
   // function loadUrl(url) {
   //   $.get(url, function(data, textStatus, jqXHR) {
