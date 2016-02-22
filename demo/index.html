@@ -2,21 +2,13 @@
 <head>
   <meta charset="utf-8">
   <link href="data:image/png;base64," type="image/x-icon" rel="icon">
-  <title>textarea</title>
-  <script>window.exports = window;</script>
-  <script src="../index.js"></script>
-  <style>
-  textarea {
-    min-width: 800px;
-    font: 12px "Courier New", Courier, monospace;
-  }
-  </style>
+  <title>textarea demo</title>
 </head>
 <body>
-  <form>
+  <div>
     <label>
       <div><b>Textarea</b></div>
-      <textarea style="width: 500px">
+      <textarea style="width: 500px; min-width: 800px; font: 12px 'Courier New', Courier, monospace;">
 var query = {};
 // take the easy outs
 if (querystring === undefined || querystring === null || querystring === '') return query;
@@ -37,56 +29,13 @@ parts.forEach(function(part) {
 });
       </textarea>
     </label>
+  </div>
 
-    <label>
-      <div><b>Load from URL</b></div>
-      <select id="url_source">
-        <option>../angular-plugins.js</option>
-        <option>../cookies.js</option>
-        <option>../forms.js</option>
-        <option>../jquery-autocomplete.js</option>
-        <option>../jquery-flags.js</option>
-        <option>../jquery-panes.js</option>
-        <option>../jquery-persistance.js</option>
-        <option>../package.json</option>
-        <option>../templating.js</option>
-        <option>../textarea.js</option>
-        <option>../url.js</option>
-      </select>
-      <button type="button" id="load_url_source">Load into textarea</button>
-    </label>
-
-    <label>
-      <div><b>Export</b></div>
-      <button type="button" id="print_to_console">Print to console</button>
-    </label>
-  </form>
-
+  <script>window.exports = window;</script>
+  <script src="../index.js"></script>
   <script>
-  /*jslint browser: true */ /* globals Textarea */
-  var textarea = document.querySelector('textarea');
-  // var textarea_enhanced = Textarea.enhance(textarea);
-  Textarea.enhance(textarea);
-
-  // function loadUrl(url) {
-  //   $.get(url, function(data, textStatus, jqXHR) {
-  //     textarea.value = data;
-  //     textarea.dispatchEvent(new Event('input'));
-  //   }, 'text');
-  // }
-
-  //   var url = $('#url_source').val()
-  //   loadUrl(url);
-  // });
-  var load_url_source = document.getElementById('load_url_source');
-  load_url_source.addEventListener('click', function() {
-    console.error('Load URL currently not implemented');
-  });
-
-  var print_to_console = document.getElementById('print_to_console');
-  print_to_console.addEventListener('click', function() {
-    console.log(textarea.value);
-  });
-
+  /* globals Textarea */
+  var textareaElement = document.querySelector('textarea');
+  var textareaController = new Textarea(textareaElement);
   </script>
 </body>

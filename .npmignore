@@ -1,0 +1,5 @@
+index.ts
+Makefile
+tsconfig.json
+coverage/
+tests/
